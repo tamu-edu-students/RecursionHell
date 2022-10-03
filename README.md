@@ -1,11 +1,11 @@
 # RecursionHell
 Software Engineering Project Fall 2022
 
-To run frontend
-cd frontend
-npm install
-npm start
+To run frontend <br />
+cd frontend <br />
+npm install <br />
+npm start <br />
 
-to run backend
-cd server
-node server.js
+to run backend <br />
+cd server <br />
+node server.js <br />
