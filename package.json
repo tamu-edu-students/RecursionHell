@@ -1,11 +1,13 @@
 {
   "scripts": {
-    "start": "run-s server-install client-install start-app",
-    "server-install": "npm install --prefix server",
-    "client-install": "npm install --prefix frontend",
-    "start-app": "run-p server client",
+    "start": "run-p server client",
     "server": "node server/server.js",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "heroku-postbuild": "npm run install-server && npm run install-client && npm run build",
+    "install-server": "npm install --prefix server",
+    "install-client": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "client-install": "npm --prefix frontend install --legacy-peer-deps"
   },
   "dependencies": {
     "concurrently": "^7.4.0",
