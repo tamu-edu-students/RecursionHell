@@ -5,7 +5,7 @@
     "client": "npm start --prefix frontend",
     "heroku-postbuild": "npm run install-server && npm run install-client && npm run build",
     "install-server": "npm install --prefix server",
-    "install-client": "cd frontend && npm install",
+    "install-client": "cd frontend && npm install --legacy-peer-deps",
     "build": "cd frontend && npm run build",
     "client-install": "npm --prefix frontend install --legacy-peer-deps"
   },
