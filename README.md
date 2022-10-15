@@ -17,3 +17,4 @@ https://stackoverflow.com/questions/47124869/deploying-a-full-stack-node-app-npm
 https://itnext.io/4-solutions-to-run-multiple-node-js-or-npm-commands-simultaneously-9edaa6215a93
 https://stackoverflow.com/questions/36172442/how-can-i-get-npm-start-at-a-different-directory
 https://stackoverflow.com/questions/58404547/cannot-read-property-match-of-undefined-during-npm-install
+https://stackoverflow.com/questions/50333003/could-not-find-module-angular-devkit-build-angular
