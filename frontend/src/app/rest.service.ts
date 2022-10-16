@@ -3,8 +3,9 @@ import { catchError } from 'rxjs/internal/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from "../environments/environment";
 
-const endpoint = 'http://localhost:8080/';
+const endpoint = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'

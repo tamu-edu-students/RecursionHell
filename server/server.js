@@ -1,7 +1,11 @@
 const express = require("express");
 const cors = require("cors");
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const app = express();
+
 
 // const db = require("./models");
 // db.sequelize.sync({ force: true }).then(() => {
@@ -30,9 +34,12 @@ const dbConfig = require("./config/db.config");
 
 // conn.end();
 
+if (process.env.NODE_ENV !== 'production') {
 var corsOptions = {
   origin: "http://localhost:4200"
 };
+}
+
 
 app.use(cors(corsOptions));
 
@@ -42,16 +49,18 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to POP application." });
-});
-
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
+// simple route
+
+app.get("/", (req, res) => {
+  res.redirect(process.cwd() + '/frontend/index.html')
+});
+
 
 var videos = require('./routes/videos');
 app.use('/videos', videos);
