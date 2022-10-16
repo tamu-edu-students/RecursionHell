@@ -6,8 +6,7 @@
     "install-server": "(cd ./server && npm install)",
     "install-client": "(cd ./frontend && npm install --legacy-peer-deps)",
     "install": "npm run install-client && npm run install-server",
-    "postinstall": "(cd ./frontend && npm run build)",
-    "heroku-postbuild": "ng build"
+    "postinstall": "(cd ./frontend && npm run build)"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
