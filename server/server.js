@@ -12,23 +12,23 @@ const app = express();
 
 const mysql = require('mysql2');
 const dbConfig = require("./config/db.config");
-var conn = mysql.createConnection({
-  host: dbConfig.HOST,
-  user : dbConfig.USER,
-  password : dbConfig.PASSWORD
-});
+// var conn = mysql.createConnection({
+//   host: dbConfig.HOST,
+//   user : dbConfig.USER,
+//   password : dbConfig.PASSWORD
+// });
 
 // Create DB project_db if not existing, if present, connect
 
-conn.query(
-  'CREATE DATABASE IF NOT EXISTS project_db',
-  function (err, result) {
-    if (err) throw err;
-    console.log('Created and connected to database!')
-  }
-);
+// conn.query(
+//   'CREATE DATABASE IF NOT EXISTS project_db',
+//   function (err, result) {
+//     if (err) throw err;
+//     console.log('Created and connected to database!')
+//   }
+// );
 
-conn.end();
+// conn.end();
 
 var corsOptions = {
   origin: "http://localhost:4200"

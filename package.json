@@ -2,12 +2,13 @@
   "scripts": {
     "start": "run-p server client",
     "server": "node server/server.js",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "install-server": "(cd ./server && npm install)",
+    "install-client": "(cd ./frontend && npm install --legacy-peer-deps)",
+    "install": "npm run install-client && npm run install-server",
+    "postinstall": "(cd ./frontend && npm run build)"
   },
   "dependencies": {
-    "concurrently": "^7.4.0",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.3",
     "npm-run-all": "^4.1.5"
   }
 }
