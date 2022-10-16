@@ -9,7 +9,8 @@
         "gitbuild": "ng build --prod --base-href /start-javascript/sb-admin-material/master/dist/",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "heroku-postbuild": "ng build"
     },
     "private": true,
     "dependencies": {
@@ -56,5 +57,9 @@
         "ts-node": "8.8.2",
         "tslint": "6.1.1",
         "tslib": "1.11.1"
+    },
+    "engines": {
+        "node": "16.17.1",
+        "npm": "8.19.2"
     }
 }
