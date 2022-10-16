@@ -31,7 +31,7 @@ conn.query(
 conn.end();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:4200"
 };
 
 app.use(cors(corsOptions));
@@ -52,3 +52,6 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
+var videos = require('./routes/videos');
+app.use('/videos', videos);
