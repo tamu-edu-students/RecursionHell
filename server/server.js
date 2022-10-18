@@ -94,7 +94,6 @@ app.get("/", (req, res) => {
   res.redirect(process.cwd() + '/frontend/index.html')
 });
 
-
 var videos = require('./routes/videos');
 //const dbConfig = require("./config/db.config");
 app.use('/videos', videos);
