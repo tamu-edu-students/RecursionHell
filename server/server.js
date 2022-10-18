@@ -48,24 +48,19 @@ const app = express();
 
 // Postgres connection
 
-// const {Pool, CLient} = require('pg');
-// const dbConfig = require("./config/db.config");
+const {Pool, Client} = require('pg');
+const dbConfig = require("./config/db.config");
 
-// const Creds = {
-//   user : dbConfig.USER,
-//   host: dbConfig.HOST,
-//   database: dbConfig.DB,
-//   password: dbConfig.PASSWORD,
-//   port: 5432,
-// };
+const Creds = {
+  user : dbConfig.USER,
+  host: dbConfig.HOST,
+  database: dbConfig.DB,
+  password: dbConfig.PASSWORD,
+  port: 5432,
+};
 
-// function clientConnect() {
-//   const client = new Client(Creds);
-//   client.connect();
-//   client.query("CREATE DATABASE ")
-//   //await client.end();
-
-// }
+const client = new Client(Creds);
+client.connect();
 
 if (process.env.NODE_ENV !== 'production') {
 var corsOptions = {
