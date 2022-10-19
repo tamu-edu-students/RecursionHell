@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    padding: 5px;
+}
+
+.table {
+    width: 100%;
+}
+
+#inline {
+    display: inline-block;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+    width: max-content;
+}
+
+#select {
+    float: right;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#report-id {
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: powderblue;
+    padding: 10px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#report-id:hover {
+    background-color: cadetblue;
+}
