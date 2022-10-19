@@ -1,4 +1,4 @@
-const { Given, When, Then } = require('cucumber');
+const { Given, When, Then } = require('@cucumber/cucumber');
 
 Given('I go to {string}', function (string) {
     // Write code here that turns the phrase above into concrete actions
@@ -45,7 +45,7 @@ Given('the field {string} is empty', function (string) {
     return 'pending';
 });
 
-       
+
 When('I type {string} in {string}', function (string, string2) {
     // Write code here that turns the phrase above into concrete actions
     return 'pending';
@@ -125,3 +125,119 @@ Then('I should {string}', function (string) {
 return 'pending';
 });
 
+
+
+When('I type {string} in username', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+When('I type {string} in password', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+Then('the login should show as {string}', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+When('I type {string} in username', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+When('I type {string} in password', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+Then('the login should show as {string}', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+When('I type {string} in username', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+When('I type {string} in password', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+
+When('I type {string} in username', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+
+When('I type {string} in password', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+When('I click on {string} button', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+Then('it should show the Upload Options', function () {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+When('I click on {string} button', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+When('Then I click on the {string} Option', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+Then('it should show as {string}', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+
+
+When('I click on {string} button', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+When('Then I click on the {string} Option', function (string) {
+// Write code here that turns the phrase above into concrete actions
+return 'pending';
+});
+
+
+Then('it should show as {string}', function (string) {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+});
+        
