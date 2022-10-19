@@ -60,8 +60,8 @@ const Creds = {
   port: 5432,
 };
 
-const client = new Client(Creds);
-client.connect();
+//const client = new Client(Creds);
+//client.connect();
 
 if (process.env.NODE_ENV !== 'production') {
 var corsOptions = {
