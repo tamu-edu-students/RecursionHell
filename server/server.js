@@ -15,25 +15,53 @@ app.use(express.static(path.resolve(__dirname, '../dist/src')));
 
 // Connect to mysql database with creds in db.config.js
 
-const mysql = require('mysql2');
-const dbConfig = require("./config/db.config");
-// var conn = mysql.createConnection({
+
+// var conn = pg.createConnection({
 //   host: dbConfig.HOST,
 //   user : dbConfig.USER,
 //   password : dbConfig.PASSWORD
 // });
 
-// Create DB project_db if not existing, if present, connect
+// const { Client } = require('pg');
+// const dbConfig = require("./config/db.config");
+// const client = new Client({
+//   host: dbConfig.HOST,
+//   user: dbConfig.USER,
+//   password: dbConfig.PASSWORD
+//   //port: dbConfig.PORT,
+// })
+// client.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+// });
 
-// conn.query(
+// // Create DB project_db if not existing, if present, connect
+
+// client.query(
 //   'CREATE DATABASE IF NOT EXISTS project_db',
 //   function (err, result) {
 //     if (err) throw err;
-//     console.log('Created and connected to database!')
+//     console.log('Connected to database')
 //   }
 // );
 
-// conn.end();
+// client.end();
+
+// Postgres connection
+
+const {Pool, Client} = require('pg');
+const dbConfig = require("./config/db.config");
+
+const Creds = {
+  user : dbConfig.USER,
+  host: dbConfig.HOST,
+  database: dbConfig.DB,
+  password: dbConfig.PASSWORD,
+  port: 5432,
+};
+
+const client = new Client(Creds);
+client.connect();
 
 if (process.env.NODE_ENV !== 'production') {
 var corsOptions = {
@@ -72,4 +100,5 @@ else{
   
 
 var videos = require('./routes/videos');
+//const dbConfig = require("./config/db.config");
 app.use('/videos', videos);
