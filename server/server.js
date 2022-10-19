@@ -3,9 +3,10 @@ const cors = require("cors");
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
+const path = require('path');
 
 const app = express();
-
+app.use(express.static(path.resolve(__dirname, '../dist/src')));
 
 // const db = require("./models");
 // db.sequelize.sync({ force: true }).then(() => {
@@ -57,10 +58,18 @@ app.listen(PORT, () => {
 
 // simple route
 
+if (process.env.NODE_ENV == 'production') {
 app.get("/", (req, res) => {
-  res.redirect(process.cwd() + '/frontend/index.html')
+  res.redirect(process.cwd()+ '../frontend/src/index.html')
 });
-
+}
+else{
+  app.get("/", (req, res) => {
+    //res.sendFile(path.resolve(`../frontend/${req.url}`));
+    res.redirect('http://localhost:4200')
+  });
+  }
+  
 
 var videos = require('./routes/videos');
 app.use('/videos', videos);
