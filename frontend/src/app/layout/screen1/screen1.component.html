@@ -1,3 +1,21 @@
-<p>
-  screen1 works!
-</p>
+<div>
+  <h2 id="left">
+    Reports
+  </h2>
+  <button type="button" (click)="uploadReport()" id="upload">Upload Video</button>
+</div>
+
+<br><br><br><br>
+
+<div class="grid-container" *ngFor="let report of teacherReports">
+  <table cellspacing="5px" cellpadding="10px">
+    <tr class="table">
+      <td id="inline">
+        <button id="report-id" type="button" (click)="openReport(report.id)">{{report.id}}</button>
+      </td>
+      <td>{{report.description}}</td>
+      <td id="right">{{report.date}}</td>
+    </tr>
+  </table>
+  <hr width="100%">
+</div>
