@@ -9,6 +9,7 @@
     "postinstall": "(cd ./frontend && npm run build)"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "npm-run-all": "^4.1.5",
     "pg": "^8.8.0"
