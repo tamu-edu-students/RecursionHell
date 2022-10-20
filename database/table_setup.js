@@ -26,6 +26,7 @@ client.query(createTableQuery, (err, res) => {
     console.log('Table Created successfully');
     // client.end();
 });
+
 test_pwd = '1234'
 uname = 'test@testmail.com'
 const hash = crypto.createHash('sha256').update(test_pwd).digest('base64');
